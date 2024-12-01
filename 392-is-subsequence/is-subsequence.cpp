@@ -6,8 +6,8 @@ public:
             if (t.find(s[i],j) == string::npos)
                 return false;
             else {
-                j = t.find(s[i], j);
-                j++;
+                j = t.find(s[i], j) + 1;
+
             }
         }
         return true;
