@@ -2,7 +2,6 @@ class Solution {
 public:
     string intToRoman(int num) {
         string romanNumeral = "";
-        int countC = 0, countX = 0, countI = 0, testNum = 0;
 
         while (num != 0) {
             while (num / 1000 >= 1){
