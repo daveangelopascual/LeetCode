@@ -1,8 +1,7 @@
 class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
-        
-        vector<string> compare(strs.size(), "");
+
         string smallestStr = strs[0];
         for (string i : strs){ 
             if (i == "") //check if any strings in vector are empty
@@ -10,22 +9,11 @@ public:
             if (i.size() < smallestStr.size()) //finds smallest string size in vector
                 smallestStr = i;
         }
-        int i = 0;
-        while (i < smallestStr.size()) {
-            
-            for (int k = 0; k < strs.size(); k++) //iterates over the length vector
-                compare[k] += strs[k][i]; //adds next char to the compare vector
-
-            for (string j : compare) {
-                if (compare[0] != j) {
-                    if (i == 0)
-                        return "";
-                    else
-                        return compare[0].substr(0, i);
-                }
+        for (int i = 0; i < strs.size(); i++) { //iterates over the length vector
+            while (strs[i].find(smallestStr) != 0) { //checks if each element in vector has the same string
+                smallestStr = smallestStr.substr(0, smallestStr.size() - 1); //decrease string size if false
             }
-            i++;
         }
-        return compare[0];
+        return smallestStr;
     }
 };
