@@ -12,6 +12,8 @@ public:
         for (int i = 0; i < strs.size(); i++) { //iterates over the length vector
             while (strs[i].find(smallestStr) != 0) { //checks if each element in vector has the same string
                 smallestStr = smallestStr.substr(0, smallestStr.size() - 1); //decrease string size if false
+                if (smallestStr == "") 
+                    return "";
             }
         }
         return smallestStr;
