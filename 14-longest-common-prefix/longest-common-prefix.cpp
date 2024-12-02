@@ -3,8 +3,8 @@ public:
     string longestCommonPrefix(vector<string>& strs) {
 
         string smallestStr = strs[0];
-        for (string i : strs){ 
-            if (i == "") //check if any strings in vector are empty
+        for (string i : strs) { 
+            if (i == "") //checks if any strings in vector are empty
                 return "";
             if (i.size() < smallestStr.size()) //finds smallest string size in vector
                 smallestStr = i;
