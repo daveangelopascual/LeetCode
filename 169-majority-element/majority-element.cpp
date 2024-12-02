@@ -5,7 +5,7 @@ public:
         for (int i : nums) {
             if (count == 0) //assigns value when count is 0
                 mode = i;
-            if (mode == i) // Boyer-Moore Voting Algorithm
+            if (mode == i) //Boyer-Moore Voting Algorithm
                 count++;
             else
                 count--;
