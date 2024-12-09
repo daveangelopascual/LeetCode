@@ -8,8 +8,7 @@ public:
         while (i >= 0 && s[i] != ' ') { // Count the length of the last word
             length++;
             i--;
-    }
-        
+        }
         return length;
     }
 };
