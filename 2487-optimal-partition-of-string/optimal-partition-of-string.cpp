@@ -5,25 +5,24 @@ public:
         string subStr = ""; // will be use as a partition
 
         for (int i = 0; i < s.length(); i++) {
-            char letter = s[i];
             if (i == s.length()-1) { //if the iteration is on the last element of s
-                if (subStr.find(letter) == string::npos) { //if char is unique within subStr
-                    subStr += letter;
+                if (subStr.find(s[i]) == string::npos) { //if char is unique within subStr
+                    subStr += s[i];
                     partitions.push_back(subStr);
                 }
                 else {
                     partitions.push_back(subStr);
-                    subStr = letter;
+                    subStr = s[i];
                     partitions.push_back(subStr);
                 }
             }
             else {
-                if (subStr.find(letter) == string::npos) //if char is unique within subStr
-                    subStr += letter;
+                if (subStr.find(s[i]) == string::npos) //if char is unique within subStr
+                    subStr += s[i];
                 
                 else {
                     partitions.push_back(subStr);
-                    subStr = letter;
+                    subStr = s[i];
                 }
             }
         }
