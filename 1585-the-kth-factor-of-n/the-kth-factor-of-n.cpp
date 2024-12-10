@@ -4,13 +4,13 @@ public:
         vector<int> factors;
         double runtime = sqrt(n);
         
-        for (int i = n; i > runtime; i--) {
+        for (int i = 1; i < runtime; i++) {
             if (n % i == 0)
-                factors.push_back(n/i);
+                factors.push_back(i);
         }
-        for (int j = runtime ; j > 0; j--) {
-            if (n % j == 0) 
-                factors.push_back(n/j);
+        for (int i = runtime; i > 0; i--) {
+            if (n % i == 0) 
+                factors.push_back(n/i);
         }
         if (k > factors.size())
             return -1;
