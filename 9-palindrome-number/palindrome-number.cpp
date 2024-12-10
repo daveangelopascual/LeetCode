@@ -1,19 +1,16 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        vector<int> original;
-        vector<int> reversed;
+        unsigned int palindrome = 0, original = x;
         if (x < 0)
             return false;
         else {
             while (x != 0){
-                original.push_back(x % 10);
-                reversed.push_back(x % 10);
+                palindrome = (palindrome * 10) + (x % 10);
                 x /= 10;
             }
         }
-        reverse(reversed.begin(),reversed.end());
-        if (original == reversed)
+        if (original == palindrome)
             return true;
         else
             return false;
