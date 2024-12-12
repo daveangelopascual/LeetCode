@@ -9,7 +9,7 @@ public:
             else if (i <= middle) //replaces if a middle number is found
                 middle = i;
             
-            else //if smallest and smaller number was found, then the third number will always be greater
+            else //if smallest and middle number was found, then the third number will always be greater
                 return true;
         }
         return false;
