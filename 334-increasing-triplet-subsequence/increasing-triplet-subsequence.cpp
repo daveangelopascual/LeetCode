@@ -6,7 +6,7 @@ public:
             if (i <= smallest) //replaces if a smallest number is found
                 smallest = i;
             
-            else if (i <= middle) //replaces if a middle number is found
+            else if (i <= middle) //replaces if a middle number (next smallest) is found
                 middle = i;
             
             else //if smallest and middle number was found, then the third number will always be greater
