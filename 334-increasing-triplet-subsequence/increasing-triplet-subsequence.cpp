@@ -9,7 +9,7 @@ public:
             else if (i <= smaller) //replaces if a smaller number is found
                 smaller = i;
             
-            else //if smallest and smaller number was found
+            else //if smallest and smaller number was found, then the third number will always be greater
                 return true;
         }
         return false;
