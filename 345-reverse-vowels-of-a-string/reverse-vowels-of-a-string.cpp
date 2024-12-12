@@ -12,10 +12,10 @@ public:
         int i = 0, j = s.length()-1;
         while (i < j) {
         
-            while (i < j && !checkVowel(s[i])) // Move i forward until a vowel is found
+            while (i < j && !checkVowel(s[i])) // iterate i forward until a vowel is found
                 i++;
             
-            while (i < j && !checkVowel(s[j])) // Move j backward until a vowel is found
+            while (i < j && !checkVowel(s[j])) // iterate j backward until a vowel is found
                 j--;
             
             if (i < j) { // Swap the vowels
