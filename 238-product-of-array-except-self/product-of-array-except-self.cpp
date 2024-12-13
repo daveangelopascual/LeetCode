@@ -26,7 +26,7 @@ public:
                 else
                     nums[i] = product;
             }
-            else { //when there is 1 zero in the vector
+            else {
                 if (nums[i] != 0) 
                     nums[i] = 0;
                 else
