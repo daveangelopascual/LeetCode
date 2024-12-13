@@ -18,22 +18,22 @@ public:
                 product *= i;
         }
 
-        if (zeroCount != 1) {
-            for (int i : nums) 
-                if (i != 0) //cannot divide by 0
-                    products.push_back(product / i);
+        
+        for (int i = 0; i < nums.size(); i++) {
+            if (zeroCount != 1) {    
+                if (nums[i] != 0) //cannot divide by 0
+                    nums[i] = product / nums[i];
                 else
-                    products.push_back(product);
-        }
-        else { //when there is 1 zero in the vector
-            for (int i : nums) {
-                if (i != 0) 
-                    products.push_back(0);
+                    nums[i] = product;
+            }
+            else { //when there is 1 zero in the vector
+                if (nums[i] != 0) 
+                    nums[i] = 0;
                 else
-                    products.push_back(product);
+                    nums[i] = product;
+                
             }
         }
-        
-        return products;
+        return nums;
     }
 };
