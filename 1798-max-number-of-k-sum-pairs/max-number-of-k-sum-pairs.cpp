@@ -7,8 +7,8 @@ public:
         while (left < right) { 
             if (nums[left]+nums[right] == k) {
                 maxPairs++;
-                nums[left++] = 0;
-                nums[right--] = 0;
+                left++;
+                right--;
             }
             else if (nums[left]+nums[right] < k) //if the sum is smaller than target, increment the smaller number
                 left++;
