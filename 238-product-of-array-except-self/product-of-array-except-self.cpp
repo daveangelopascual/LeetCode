@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        vector<int> products;
         long int product = 1;
         int zeroCount = 0;
 
