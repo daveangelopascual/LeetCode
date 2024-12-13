@@ -9,7 +9,7 @@ public:
             if (i == 0)
                 zeroCount++;
         }
-        for (int i : nums) { //used to calculate product based on zeroCount!
+        for (int i : nums) { //used to calculate product based on zeroCount
             if (zeroCount == 1){
                 if (i != 0)
                     product *= i;
