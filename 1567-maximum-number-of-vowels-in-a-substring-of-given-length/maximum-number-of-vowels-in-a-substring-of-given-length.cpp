@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool checkVowel(char c) {
-        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+        return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
     }
 
     int maxVowels(string s, int k) {
