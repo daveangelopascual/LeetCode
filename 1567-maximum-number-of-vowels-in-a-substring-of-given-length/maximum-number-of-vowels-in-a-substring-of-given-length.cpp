@@ -8,13 +8,13 @@ public:
     }
 
     int maxVowels(string s, int k) {
-        int vowelCount = 0;
+        int vowelCount = 0, maxCount;
 
         for (int i = 0; i < k; i++) { //calculating starting window
             if (checkVowel(s[i]) == true)
                 vowelCount++;
         }
-        int maxCount = vowelCount; //initalizng maxCount
+        maxCount = vowelCount; //initalizng maxCount
 
         for (int i = k; i < s.length(); i++) { //calculate sliding window across the array
             if (checkVowel(s[i-k]) == true)
