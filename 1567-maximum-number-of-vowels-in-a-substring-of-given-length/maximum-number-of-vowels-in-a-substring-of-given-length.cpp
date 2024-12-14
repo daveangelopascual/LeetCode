@@ -20,7 +20,7 @@ public:
             if (checkVowel(s[i]))
                 vowelCount++;
             
-            maxCount = max(maxCount, vowelCount); //for each window determine the max 
+            maxCount = max(maxCount, vowelCount); //for each window determine the max
         }
         return maxCount;
     }
