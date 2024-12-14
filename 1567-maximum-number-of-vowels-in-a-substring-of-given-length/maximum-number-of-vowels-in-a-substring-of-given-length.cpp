@@ -11,7 +11,7 @@ public:
             if (checkVowel(s[i]))
                 vowelCount++;
         }
-        int maxCount = vowelCount; //initalizng maxCount
+        int maxCount = vowelCount; //initalizng maxCount for initial window
 
         for (int i = k; i < s.length(); i++) { //calculate sliding window across the array
             if (checkVowel(s[i-k]))
