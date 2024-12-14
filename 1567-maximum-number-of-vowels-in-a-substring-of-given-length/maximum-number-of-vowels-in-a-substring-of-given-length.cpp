@@ -22,7 +22,6 @@ public:
             
             maxCount = max(maxCount, vowelCount); //for each window determine the max
         }
-
         return maxCount;
     }
 };
