@@ -7,7 +7,7 @@ public:
     int maxVowels(string s, int k) {
         int vowelCount = 0;
 
-        for (int i = 0; i < k; i++) { //calculate starting window
+        for (int i = 0; i < k; i++) { //calculate starting window 
             if (checkVowel(s[i]))
                 vowelCount++;
         }
