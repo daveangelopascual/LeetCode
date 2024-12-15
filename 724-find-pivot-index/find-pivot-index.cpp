@@ -1,8 +1,5 @@
 class Solution {
 public:
-    void calculateSum (vector<int> nums,int index, int& sumL, int& sumR) {
-        
-    }
     int pivotIndex(vector<int>& nums) {
         int leftSum = 0, rightSum = 0, index = 0;
         for (int i = index + 1; i < nums.size(); i++)
